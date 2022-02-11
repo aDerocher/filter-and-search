@@ -1,3 +1,36 @@
+# Filter Component Project
+
+The purpose of this project was to create a React component that could filter large arrays of data objects by their various attributes. It needed to be easy to modify by adding and removing filters.
+
+This is a standard react app, so instructions for running it are at the bottom.
+
+This application is made up of two components: the `Filter` and the `Data`
+
+## How to Use the Filter
+The filter is one component that tracks multiple attributes as well as the search term.
+The `search` function will cause the data to render any items that have an attribute that matches the searchterm (color, size, name, etc).
+The checkboxes will filter out any data points whos applicable attribute is not checked. If no boxes are checked for a given attribute, items are not filtered by that attribute.
+Additional filters can easily be added by:
+1. adding a new useState variable (e.g. price)
+2. adding a new section element to the div.filter with a checkbox input for each option
+3. set the onChange attribute appropriately to run the e=>setYourFilter(updateFilter(e.target.value, yourFilter))
+4. add the necessary checks to the useEffect responsible for updating the results
+
+If done correctly, the newly filters will work to update the results show by the `data` component.
+The data component simply accepts the list on each update and displays the results.
+
+## About
+I built this project to suppliment any online shopping applications that may need to filter lots of search results. My goal was to make it as simple as possible to impliment and add on to.
+
+Future plans:
+ -  Incorporate some more interesting filters for price like a slide bar.
+ -  Possible re-organization to component structure
+ -  Build out an 'Apply Filters' button since large amounts of data or a high number of filters may be too heavy to allow for the auto re-renders
+
+
+---
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -10,61 +43,3 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

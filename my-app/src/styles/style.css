@@ -4,13 +4,19 @@
     flex-direction: row;
     margin: 2rem;
 }
-
-.filters{
-    background-color: lightgrey;
+h4{
+    margin: 0;
+    text-decoration: underline;
 }
-.filters > * {
+section{
+    background-color: rgb(230,230,230);
+    padding: 0.5rem;
     border-top: 1px solid grey;
 }
+li{
+    text-align: left;
+}
 .data{
-
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
 }
