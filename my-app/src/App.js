@@ -1,11 +1,11 @@
 import logo from './logo.svg';
-import SearchBar from './components/SearchBar'
+import Filter from './components/Filter'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <SearchBar />
+      <Filter />
     </div>
   );
 }
