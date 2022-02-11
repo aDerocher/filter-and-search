@@ -20,7 +20,12 @@ If done correctly, the newly filters will work to update the results show by the
 The data component simply accepts the list on each update and displays the results.
 
 ## About
-I built this project as a
+I built this project to suppliment any online shopping applications that may need to filter lots of search results. My goal was to make it as simple as possible to impliment and add on to.
+
+Future plans:
+ -  Incorporate some more interesting filters for price like a slide bar.
+ -  Possible re-organization to component structure
+ -  Build out an 'Apply Filters' button since large amounts of data or a high number of filters may be too heavy to allow for the auto re-renders
 
 
 ---
