@@ -3,8 +3,6 @@ import data from './../data/clothes.json'
 
 const SearchBar = () => {
 
-	
-	
 	const clothesData = data.clothes
 	const [ list, setList ] = useState([])
 	const [ searchVal, setSearchVal ] = useState("")
@@ -31,19 +29,15 @@ const SearchBar = () => {
 	},[searchVal, colorFilter])
 
 	const handleColorFilter = (color) => {
-		console.log(colorFilter)
 		let colors = [...colorFilter]
-		console.log(colors, color, colors.indexOf(color))
-		if (!(-1)){
-			console.log('nope. add ', color)
+		if (colors.indexOf(color) < 0){
 			colors.push(color)
 		} else {
-			colors.filter((col) => {
+			colors = colors.filter((col) => {
 				return col !== color
 			})
 		}
 		setColorFilter(colors)
-		console.log(colorFilter)
 		return
 	}
 
