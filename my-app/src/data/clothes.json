@@ -1,0 +1,14 @@
+{
+    "clothes":[
+        {"type":"shirt","color":"red","size":"lg"},
+        {"type":"shirt","color":"green","size":"lg"},
+        {"type":"shirt","color":"red","size":"lg"},
+        {"type":"shirt","color":"orange","size":"sm"},
+        {"type":"shirt","color":"blue","size":"md"},
+        {"type":"pants","color":"blue","size":"lg"},
+        {"type":"pants","color":"grey","size":"xl"},
+        {"type":"pants","color":"red","size":"md"},
+        {"type":"pants","color":"grey","size":"sm"},
+        {"type":"pants","color":"blue","size":"ls"}
+    ]
+}
