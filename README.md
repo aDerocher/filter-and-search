@@ -2,7 +2,7 @@
 
 The purpose of this project was to create a React component that could filter large arrays of data objects by their various attributes. It needed to be easy to modify by adding and removing filters.
 
-![](https://github.com/aDerocher/filter-and-search/blob/main/github-wiki/README-splash.PNG)
+![](readMe-images/none-filter.PNG)
 
 This is a standard react app, so instructions for running it are at the bottom.
 
