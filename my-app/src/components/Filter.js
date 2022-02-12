@@ -11,7 +11,6 @@ const Filter = () => {
 	const [ colorFilter, setColorFilter ] = useState([])
 	const [ sizeFilter, setSizeFilter ] = useState([])
 	const [ typeFilter, setTypeFilter ] = useState([])
-	const [ yourFilter, setYourFilter ] = useState([])
 
 	useEffect(() => {
 		setList(clothesData)
@@ -28,19 +27,17 @@ const Filter = () => {
 			if(colorFilter.length > 0 && !colorFilter.includes(item.color)){ return false }
 			if(sizeFilter.length > 0 && !sizeFilter.includes(item.size)){ return false }
 			if(typeFilter.length > 0 && !typeFilter.includes(item.type)){ return false }
-			if(yourFilter.length > 0 && !yourFilter.includes(item.yourAttr)){ return false }
 
 			// ======== check data against search term
 			if(item.name.toLowerCase().includes(lowSearchVal) ||
 				item.type.toLowerCase().includes(lowSearchVal) ||
 				item.color.toLowerCase().includes(lowSearchVal) ||
-				item.size.toLowerCase().includes(lowSearchVal) ||
-				item.yourAttr.toLowerCase().includes(lowSearchVal)){
+				item.size.toLowerCase().includes(lowSearchVal)){
 					return true
 			}
 		})
 		setList(newList)
-	},[searchVal, colorFilter, sizeFilter, typeFilter, yourAttrFilter])
+	},[searchVal, colorFilter, sizeFilter, typeFilter])
 
 
 	// ======== toggles an attribute in/out of a given filter
@@ -106,16 +103,6 @@ const Filter = () => {
 					<br />
 					<label>Hats</label>
 					<input type='checkbox' value='hat' onChange={e=>setTypeFilter(updateFilter(e.target.value, typeFilter))}></input>
-				</section>
-				<section className='filter'>
-					<h4>Your Filter</h4>
-					<label>Your Attr 1</label>
-					<input type='checkbox' value='attr1' onChange={e=>setYourAttrFilter(updateFilter(e.target.value, yourAttrFilter))}></input>
-					<br />
-					<label>Your Attr 2</label>
-					<input type='checkbox' value='attr2' onChange={e=>setYourAttrFilter(updateFilter(e.target.value, yourAttrFilter))}></input>
-					<br />
-
 				</section>
 			</div>
 
