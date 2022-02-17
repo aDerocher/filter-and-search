@@ -50,6 +50,10 @@ const Filter = () => {
 				return a !== attr
 			})
 		}
+		let fakeCheckBox = document.getElementById(`fake-${attr}`)
+		if(fakeCheckBox){
+			fakeCheckBox.classList.toggle('fake-checked')
+		}
 		return newArr
 	}
 
@@ -64,45 +68,71 @@ const Filter = () => {
 
 				<section className='filter'>
 					<h4>Color</h4>
-					<label>Red</label>
-					<input type='checkbox' value='red' onChange={e=>setColorFilter(updateFilter(e.target.value, colorFilter))}></input>
-					<br />
-					<label>Orange</label>
-					<input type='checkbox' value='orange' onChange={e=>setColorFilter(updateFilter(e.target.value, colorFilter))}></input>
-					<br />
-					<label>Green</label>
-					<input type='checkbox' value='green' onChange={e=>setColorFilter(updateFilter(e.target.value, colorFilter))}></input>
-					<br />
-					<label>Blue</label>
-					<input type='checkbox' value='blue' onChange={e=>setColorFilter(updateFilter(e.target.value, colorFilter))}></input>
-					<br />
-					<label>Grey</label>
-					<input type='checkbox' value='grey' onChange={e=>setColorFilter(updateFilter(e.target.value, colorFilter))}></input>
+					<div className='filter-option'>
+						<label>Red</label>
+						<div id="fake-red" className='fake-input' onClick={e=>setColorFilter(updateFilter(e.target.firstChild.value, colorFilter))}>
+							<input type='checkbox' value='red' hidden></input>
+						</div>
+					</div>
+					<div className='filter-option'>
+						<label>Orange</label>
+						<div id="fake-orange" className='fake-input' onClick={e=>setColorFilter(updateFilter(e.target.firstChild.value, colorFilter))}>
+							<input type='checkbox' value='orange' hidden></input>
+						</div>
+					</div>
+					<div className='filter-option'>
+						<label>Green</label>
+						<div id="fake-green" className='fake-input' onClick={e=>setColorFilter(updateFilter(e.target.firstChild.value, colorFilter))}>
+							<input type='checkbox' value='green' hidden></input>
+						</div>
+					</div>
+					<div className='filter-option'>
+						<label>Blue</label>
+						<div id="fake-blue" className='fake-input' onClick={e=>setColorFilter(updateFilter(e.target.firstChild.value, colorFilter))}>
+							<input type='checkbox' value='blue' hidden></input>
+						</div>
+					</div>
+					<div className='filter-option'>
+						<label>Grey</label>
+						<div id="fake-grey" className='fake-input' onClick={e=>setColorFilter(updateFilter(e.target.firstChild.value, colorFilter))}>
+							<input type='checkbox' value='grey' hidden></input>
+						</div>
+					</div>
+
 				</section>
 				<section className='filter'>
 					<h4>Size</h4>
-					<label>Small</label>
-					<input type='checkbox' value='sm' onChange={e=>setSizeFilter(updateFilter(e.target.value, sizeFilter))}></input>
-					<br />
-					<label>Medium</label>
-					<input type='checkbox' value='md' onChange={e=>setSizeFilter(updateFilter(e.target.value, sizeFilter))}></input>
-					<br />
-					<label>Large</label>
-					<input type='checkbox' value='lg' onChange={e=>setSizeFilter(updateFilter(e.target.value, sizeFilter))}></input>
-					<br />
-					<label>X-Large</label>
-					<input type='checkbox' value='xl' onChange={e=>setSizeFilter(updateFilter(e.target.value, sizeFilter))}></input>
+					<div className='filter-option'>
+						<label>Small</label>
+						<input type='checkbox' value='sm' onChange={e=>setSizeFilter(updateFilter(e.target.value, sizeFilter))}></input>
+					</div>
+					<div className='filter-option'>
+						<label>Medium</label>
+						<input type='checkbox' value='md' onChange={e=>setSizeFilter(updateFilter(e.target.value, sizeFilter))}></input>
+					</div>
+					<div className='filter-option'>
+						<label>Large</label>
+						<input type='checkbox' value='lg' onChange={e=>setSizeFilter(updateFilter(e.target.value, sizeFilter))}></input>
+					</div>
+					<div className='filter-option'>
+						<label>X-Large</label>
+						<input type='checkbox' value='xl' onChange={e=>setSizeFilter(updateFilter(e.target.value, sizeFilter))}></input>
+					</div>
 				</section>
 				<section className='filter'>
 					<h4>Type</h4>
-					<label>Shirts</label>
-					<input type='checkbox' value='shirt' onChange={e=>setTypeFilter(updateFilter(e.target.value, typeFilter))}></input>
-					<br />
-					<label>Pants</label>
-					<input type='checkbox' value='pants' onChange={e=>setTypeFilter(updateFilter(e.target.value, typeFilter))}></input>
-					<br />
-					<label>Hats</label>
-					<input type='checkbox' value='hat' onChange={e=>setTypeFilter(updateFilter(e.target.value, typeFilter))}></input>
+					<div className='filter-option'>
+						<label>Shirts</label>
+						<input type='checkbox' value='shirt' onChange={e=>setTypeFilter(updateFilter(e.target.value, typeFilter))}></input>
+					</div>
+					<div className='filter-option'>
+						<label>Pants</label>
+						<input type='checkbox' value='pants' onChange={e=>setTypeFilter(updateFilter(e.target.value, typeFilter))}></input>
+					</div>
+					<div className='filter-option'>
+						<label>Hats</label>
+						<input type='checkbox' value='hat' onChange={e=>setTypeFilter(updateFilter(e.target.value, typeFilter))}></input>
+					</div>
 				</section>
 			</div>
 
